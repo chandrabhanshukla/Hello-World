@@ -1,0 +1,31 @@
+{
+  "name": "coap-logistic-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "nyc --reporter=lcovonly npm test",
+    "test": "mocha --compilers js:babel-core/register --require tests/setup.js ./ec2/test/* ./serverless/test/*",
+    "systest": "cucumber-js --compiler js:babel-core/register --tags 'not @mockbin-check'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "2.3.0"
+  },
+  "devDependencies": {
+    "async": "2.1.4",
+    "browserify": "13.0.1",
+    "chai": "3.5.0",
+    "chai-as-promised": "6.0.0",
+    "chai-subset": "1.4.0",
+    "chai-things": "0.2.0",
+    "coap": "*",
+    "cucumber": "2.0.0-rc.4",
+    "mocha": "^3.1.0",
+    "sinon": "1.17.4",
+    "sinon-chai": "2.8.0",
+    "swagger-ui": "2.2.3",
+    "udp-proxy": "*"
+  }
+}
